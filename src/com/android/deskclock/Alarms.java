@@ -78,6 +78,9 @@ public class Alarms {
     // alarm played before being killed.
     public static final String ALARM_KILLED_TIMEOUT = "alarm_killed_timeout";
 
+    // Extra in the ALARM_KILLED intent to indicate when alarm was replaced
+    public static final String ALARM_REPLACED = "alarm_replaced";
+
     // This string is used to indicate a silent alarm in the db.
     public static final String ALARM_ALERT_SILENT = "silent";
 
@@ -189,7 +192,7 @@ public class Alarms {
         values.put(Alarm.Columns.ALERT, alarm.alert == null ? ALARM_ALERT_SILENT
                 : alarm.alert.toString());
 
-        values.put(Alarm.Columns.INCVOL, alarm.incvol);
+        values.put(Alarm.Columns.INCREASING_VOLUME, alarm.increasingVolume);
 
         return values;
     }
@@ -427,9 +430,9 @@ public class Alarms {
         AlarmManager am = (AlarmManager)
                 context.getSystemService(Context.ALARM_SERVICE);
 
-        if (Log.LOGV) {
-            Log.v("** setAlert id " + alarm.id + " atTime " + atTimeInMillis);
-        }
+        // Intentionally verbose: always log the alarm time to provide useful
+        // information in bug reports.
+        Log.v("Alarm set for id=" + alarm.id + " " + Log.formatTime(atTimeInMillis));
 
         Intent intent = new Intent(ALARM_ALERT_ACTION);
 
@@ -477,6 +480,9 @@ public class Alarms {
                 PendingIntent.FLAG_CANCEL_CURRENT);
         am.cancel(sender);
         setStatusBarIcon(context, false);
+        // Intentionally verbose: always log the lack of a next alarm to provide useful
+        // information in bug reports.
+        Log.v("No next alarm");
         saveNextAlarm(context, "");
     }
 

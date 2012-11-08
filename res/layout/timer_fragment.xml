@@ -60,8 +60,6 @@
         android:orientation="vertical">
         <com.android.deskclock.TimerSetupView
             android:id="@+id/timer_setup"
-            android:layout_marginLeft="8dip"
-            android:layout_marginRight="8dip"
             android:layout_width="match_parent"
             android:layout_height="0dip"
             android:layout_weight="1" />
@@ -78,7 +76,7 @@
                <Button
                     android:id="@+id/timer_cancel"
                     android:text="@string/timer_cancel"
-                    android:layout_width="0dip"
+                    android:layout_width="match_parent"
                     style="@style/button"
                     android:layout_weight="1"
                     android:background="@drawable/item_background"
@@ -93,20 +91,11 @@
                <Button
                     android:id="@+id/timer_start"
                     android:text="@string/timer_start"
-                    android:layout_width="0dip"
+                    android:layout_width="match_parent"
                     style="@style/button"
                     android:layout_weight="1"
                     android:background="@drawable/item_background"
                     android:layout_height="wrap_content" />
-               <ImageButton
-                   android:id="@+id/menu_button"
-                   android:contentDescription="@string/button_menu"
-                   style="?android:attr/actionOverflowButtonStyle"
-                   android:background="@drawable/item_background"
-                   android:onClick="clockButtonsOnClick"
-                   android:layout_gravity="right"
-                   android:layout_width="64dip"
-                   android:layout_height="match_parent" />
               </LinearLayout>
            </FrameLayout>
     </LinearLayout>
