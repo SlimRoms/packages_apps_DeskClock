@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013 SlimRoms Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Flip action</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title" product="tablet">Flip the tablet to\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Flip the phone to\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary" product="tablet">Flipping the tablet down will <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Flipping the phone down will <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Setting title for the shake action setting. -->
+    <string name="shake_action_title">Shake action</string>
+
+    <!-- Dialog title for the shake action setting. -->
+    <string name="shake_action_dialog_title" product="tablet">Shake the tablet to\u2026</string>
+    <string name="shake_action_dialog_title" product="default">Shake the phone to\u2026</string>
+
+    <!-- Setting summary for the shake action setting. -->
+    <string name="shake_action_summary" product="tablet">Shaking the tablet will <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Shaking the phone will <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Summary texts for shake and flip actions -->
+    <string name="action_summary_do_nothing">do nothing</string>
+    <string name="action_summary_snooze">snooze alarm</string>
+    <string name="action_summary_dismiss">dismiss alarm</string>
+
+</resources>
