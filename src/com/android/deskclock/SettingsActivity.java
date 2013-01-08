@@ -46,6 +46,10 @@ public class SettingsActivity extends PreferenceActivity
             "snooze_duration";
     public static final String KEY_VOLUME_BEHAVIOR =
             "volume_button_setting";
+    public static final String KEY_FLIP_ACTION =
+            "flip_action";
+    public static final String KEY_SHAKE_ACTION =
+            "shake_action";
     public static final String KEY_AUTO_SILENCE =
             "auto_silence";
     public static final String KEY_CLOCK_STYLE =
@@ -171,6 +175,11 @@ public class SettingsActivity extends PreferenceActivity
         sendBroadcast(i);
     }
 
+    private void updateActionSummary(ListPreference listPref, String action, int summaryResId) {
+        int i = listPref.findIndexOfValue(action);
+        listPref.setSummary(getString(summaryResId,
+            getResources().getStringArray(R.array.action_summary_entries)[i]));
+    }
 
     private void refresh() {
         ListPreference listPref = (ListPreference) findPreference(KEY_AUTO_SILENCE);
@@ -192,6 +201,14 @@ public class SettingsActivity extends PreferenceActivity
 
         listPref = (ListPreference) findPreference(KEY_VOLUME_BUTTONS);
         listPref.setSummary(listPref.getEntry());
+        listPref.setOnPreferenceChangeListener(this);
+
+        listPref = (ListPreference) findPreference(KEY_FLIP_ACTION);
+        updateActionSummary(listPref, listPref.getValue(), R.string.flip_action_summary);
+        listPref.setOnPreferenceChangeListener(this);
+
+        listPref = (ListPreference) findPreference(KEY_SHAKE_ACTION);
+        updateActionSummary(listPref, listPref.getValue(), R.string.shake_action_summary);
         listPref.setOnPreferenceChangeListener(this);
 
         SnoozeLengthDialog snoozePref = (SnoozeLengthDialog) findPreference(KEY_ALARM_SNOOZE);
