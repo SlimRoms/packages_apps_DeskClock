@@ -121,6 +121,9 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Загрузка мелодии звонка..."</string>
     <string name="timer_ring_service_desc" msgid="2620214305660322415">"Модуль воспроизведения сигналов таймера"</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Установить будильник"</string>
+    <!-- Label on the main screen control used to set alarm when there is already an existing alarm [CHAR LIMIT=30]-->
+    <string name="control_set_alarm_with_existing"><xliff:g id="time">%s</xliff:g></string>
+
     <!-- no translation found for control_set_alarm_with_existing (3359285346655630660) -->
     <skip />
     <string name="menu_timer" msgid="6459070074762877114">"Таймер"</string>
