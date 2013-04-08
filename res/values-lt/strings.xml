@@ -57,7 +57,11 @@
     <string name="show_status_bar_icon_title">Rodyti piktogramą</string>
     <string name="show_status_bar_icon_summary">Kai žadintuvas įjungtas, rodyti piktogramą būsenos juostoje</string>
     <string name="snooze_duration_title">Snaudimo trukmė</string>
+    <string name="flip_action_title">Apvertimo paskirtis</string>
+    <string name="flip_action_dialog_title">Apversti prietaisą į\u2026</string>
+    <string name="flip_action_summary">Įrenginio apvertimas žemyn <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_title">Veiksmas purtant</string>
+    <string name="shake_action_dialog_title">Papurtyti įrenginį, kad\u2026</string>
     <string name="shake_action_summary">Purtant telefoną bus <xliff:g id="action"> %s </xliff:g></string>
     <string name="auto_silence_title">Po to nutildyti</string>
     <string name="auto_silence_summary"><xliff:g id="MINUTES">%d</xliff:g> min.</string>
@@ -103,9 +107,13 @@
     <string name="sw_lap_button">Ratas</string>
     <string name="sw_reset_button">Nustatyti iš naujo</string>
     <string name="sw_share_button">Bendrinti</string>
+    <string name="hours_label">val</string>
+    <string name="minutes_label">min</string>
+    <string name="seconds_label">s</string>
     <string name="hours_label_description">val.</string>
     <string name="minutes_label_description">min.</string>
     <string name="seconds_label_description">sek.</string>
+    <string name="zero">0</string>
     <string name="sw_share_main">Mano laikas yra <xliff:g id="TIME">%s</xliff:g></string>
     <string name="sw_share_laps">Persidengiantis laikas:</string>
     <string name="sw_notification_lap_number"><xliff:g id="NUMBER">%d</xliff:g> ratas</string>
@@ -122,6 +130,9 @@
     <string name="cities_activity_title">Miestai</string>
     <string name="alarm_on">ĮJUNGTA</string>
     <string name="alarm_off">IŠJUNGTA</string>
+    <string name="stopwatch_settings">CHRONOMETRAS</string>
+    <string name="keep_display_on_stopwatch">Ekranas bus įjungtas visą laiką</string>
+    <string name="keep_display_on_stopwatch_summary">Ekranas bus įjungtas visą chronometro veikimo laiką</string>
     <string name="clock_settings">LAIKRODIS</string>
     <string name="clock_style">Stilius</string>
     <string name="automatic_home_clock">Automatinis pagrindinio laiko laikrodis</string>
@@ -162,6 +173,7 @@
     <string name="timer_delete_confirmation">Ištrinti šį laikmatį?</string>
     <string name="city_delete_confirmation">Pašalinti šį miestą?</string>
     <string name="digital_gadget">Skaitmeninis laikrodis</string>
+    <string name="no_alarms">Nėra signalų</string>
     <string-array name="timer_notifications">
         <item>Liko mažiau nei minutė</item>
         <item>Liko <xliff:g id="HOURS">%1$s</xliff:g></item>
@@ -193,9 +205,9 @@
         <item>Nieko nedaryti</item>
     </string-array>
     <string-array name="action_summary_entries">
-        <item>do nothing</item>
-        <item>snooze alarm</item>
-        <item>dismiss alarm</item>
+        <item>nieko nedaryti</item>
+        <item>snausti</item>
+        <item>išjungti signalą</item>
     </string-array>
     <string-array name="stopwatch_format_set">
         <item><xliff:g id="M">%2$d</xliff:g>m <xliff:g id="S">%3$02d</xliff:g>s.<xliff:g id="D">%4$02d</xliff:g></item>
@@ -227,14 +239,14 @@
         <item>"Aliaska"</item>
         <item>"Ramiojo vandenyno laikas"</item>
         <item>"Tichuana"</item>
-        <item>\"Arizona\"</item>
+        <item>"Arizona"</item>
         <item>"Čihuahua"</item>
         <item>"Kalnų laikas"</item>
         <item>"Centrinė Amerika"</item>
         <item>"Centrinis laikas"</item>
         <item>"Meksikas"</item>
         <item>"Saskačevanas"</item>
-        <item>\"Bogota\"</item>
+        <item>"Bogota"</item>
         <item>"Rytų laikas"</item>
         <item>"Venesuela"</item>
         <item>"Atl. vand. l. (Barbad.)"</item>
@@ -270,7 +282,7 @@
         <item>"Kuveitas"</item>
         <item>"Nairobis"</item>
         <item>"Teheranas"</item>
-        <item>\"Baku\"</item>
+        <item>"Baku"</item>
         <item>"Tbilisis"</item>
         <item>"Jerevanas"</item>
         <item>"Dubajus"</item>
@@ -278,10 +290,10 @@
         <item>"Islamabadas, Karačis"</item>
         <item>"Uralskas"</item>
         <item>"Jekaterinburgas"</item>
-        <item>\"Kolkata\"</item>
+        <item>"Kalkuta"</item>
         <item>"Šri Lanka"</item>
         <item>"Katmandu"</item>
-        <item>\"Astana\"</item>
+        <item>"Astana"</item>
         <item>"Jangongas"</item>
         <item>"Krasnojarskas"</item>
         <item>"Bankokas"</item>
@@ -304,7 +316,7 @@
         <item>"Magadanas"</item>
         <item>"Oklandas"</item>
         <item>"Fidžis"</item>
-        <item>\"Tonga\"</item>
+        <item>"Tonga"</item>
     </string-array>
     <plurals name="snooze_duration">
         <item quantity="one">1 min.</item>
