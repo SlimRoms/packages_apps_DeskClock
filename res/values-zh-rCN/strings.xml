@@ -69,13 +69,6 @@
     <string name="analog_gadget" msgid="1670505720837152766">"指针时钟"</string>
     <string name="help" msgid="7786263119482654015">"帮助"</string>
     <string name="settings" msgid="5849739030579520686">"设置"</string>
-
-    <!-- Setting title for showing/hiding the alarm status bar icon -->
-    <string name="show_status_bar_icon_title">显示图标</string>
-
-    <!-- Setting summary for showing/hiding the alarm statusbar icon -->
-    <string name="show_status_bar_icon_summary">闹钟设定时在状态栏上显示一个图标</string>
-
     <string name="snooze_duration_title" msgid="1097309861110780483">"暂停时长"</string>
   <plurals name="snooze_duration">
     <item quantity="one" msgid="7406963706727564418">"1 分钟"</item>
@@ -85,24 +78,6 @@
     <item quantity="one" msgid="3783171637798575068">"分钟"</item>
     <item quantity="other" msgid="1304056759541595077">"分钟"</item>
   </plurals>
-
-    <!-- Setting title for the flip action setting. -->
-    <string name="flip_action_title">翻转行为</string>
-
-    <!-- Dialog title of the flip action setting. -->
-    <string name="flip_action_dialog_title">翻转设备将\u2026</string>
-
-    <!-- Setting summary for the flip action setting. -->
-    <string name="flip_action_summary">翻转设备将<xliff:g id="action">%s</xliff:g></string>
-
-    <!-- Setting title for the shake action setting. -->
-    <string name="shake_action_title">摇动行为</string>
-
-    <!-- Dialog title for the shake action setting. -->
-    <string name="shake_action_dialog_title">摇动设备将\u2026</string>
-
-    <!-- Setting summary for the shake action setting. -->
-    <string name="shake_action_summary">翻转设备将<xliff:g id="action">%s</xliff:g></string>
     <string name="auto_silence_title" msgid="2012754009554434544">"闹铃时长"</string>
     <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> 分钟"</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"永不"</string>
@@ -126,19 +101,10 @@
     <string name="volume_button_setting_title" msgid="6937131248843413357">"音量按钮"</string>
     <string name="volume_button_dialog_title" msgid="8768042543750036853">"按钮的作用"</string>
   <string-array name="volume_button_setting_entries">
-    <item msgid="7972756698723318690">"暂停闹钟"</item>
-    <item msgid="3450979320164769576">"关闭闹钟"</item>
-    <item msgid="6302517608411378024">"不产生任何作用"</item>
+    <item msgid="7972756698723318690">"暂停"</item>
+    <item msgid="3450979320164769576">"关闭"</item>
+    <item msgid="6302517608411378024">"不进行任何操作"</item>
   </string-array>
-
-    <!-- Summary texts for shake and flip actions. Must be ordered by numerical
-         value (do nothing = 0, snooze = 1, dismiss = 2) -->
-    <string-array name="action_summary_entries">
-      <item>不产生任何作用</item>
-      <item>暂停闹钟</item>
-      <item>关闭闹钟</item>
-    </string-array>
-
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"设置默认铃声"</string>
     <string name="alarm_button_description" msgid="740283647046258651">"闹钟"</string>
     <string name="gallery_button_description" msgid="1151743663255257668">"图库"</string>
@@ -151,7 +117,7 @@
     <string name="battery_charging_level" msgid="5251483622085889693">"<xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="weather_fetch_failure" msgid="3425804832021006835">"目前无法提供天气信息。"</string>
     <string name="alarm_klaxon_service_desc" msgid="2147506334302260256">"在“时钟”内设置的闹钟铃声播放服务。"</string>
-    <string name="loading_ringtone" msgid="6523322777415268044">"正在载入铃声..."</string>
+    <string name="loading_ringtone" msgid="6523322777415268044">"正在加载铃声..."</string>
     <string name="timer_ring_service_desc" msgid="2620214305660322415">"用于“时钟”内设置的计时器的音效播放服务。"</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"设置闹钟"</string>
     <!-- no translation found for control_set_alarm_with_existing (3359285346655630660) -->
@@ -181,13 +147,6 @@
     <string name="sw_share_main" msgid="7703563468204234405">"我的时间：<xliff:g id="TIME">%s</xliff:g>"</string>
     <string name="sw_share_laps" msgid="614390674795945007">"各圈时间："</string>
     <string name="sw_notification_lap_number" msgid="3535420316052647126">"第 <xliff:g id="NUMBER">%d</xliff:g> 圈"</string>
-  <string-array name="stopwatch_format_set">
-    <item msgid="7855304148648938406">"<xliff:g id="M">%2$d</xliff:g>:<xliff:g id="S">%3$02d</xliff:g>.<xliff:g id="D">%4$02d</xliff:g>"</item>
-    <item msgid="3964356050933061913">"<xliff:g id="M">%2$02d</xliff:g>:<xliff:g id="S">%3$02d</xliff:g>.<xliff:g id="D">%4$02d</xliff:g>"</item>
-    <item msgid="4906928997138522728">"<xliff:g id="H">%1$d</xliff:g>:<xliff:g id="M">%2$02d</xliff:g>:<xliff:g id="S">%3$02d</xliff:g>.<xliff:g id="D">%4$02d</xliff:g>"</item>
-    <item msgid="1167529664702951052">"<xliff:g id="H">%1$02d</xliff:g>:<xliff:g id="M">%2$02d</xliff:g>:<xliff:g id="S">%3$02d</xliff:g>.<xliff:g id="D">%4$02d</xliff:g>"</item>
-    <item msgid="4383974684898411623">"<xliff:g id="H">%1$03d</xliff:g>:<xliff:g id="M">%2$02d</xliff:g>:<xliff:g id="S">%3$02d</xliff:g>.<xliff:g id="D">%4$02d</xliff:g>"</item>
-  </string-array>
   <plurals name="Nhours_description">
     <item quantity="one" msgid="371227238759147245">"1 小时"</item>
     <item quantity="other" msgid="7018184076091344797">"<xliff:g id="NUMBER">%d</xliff:g> 小时"</item>
@@ -225,16 +184,8 @@
     <item quantity="one" msgid="6764708652976799977">"1 分钟"</item>
     <item quantity="other" msgid="3799129667336330616">"<xliff:g id="NUMBER">%d</xliff:g> 个计时器"</item>
   </plurals>
-    <string name="home_label" msgid="4436139365695453870">"家中"</string>
+    <string name="home_label" msgid="4436139365695453870">"家"</string>
     <string name="cities_activity_title" msgid="8552462751129256730">"城市"</string>
-    <string name="alarm_on" msgid="4344630320756422804">"开启"</string>
-    <string name="alarm_off" msgid="6478058633710013612">"关闭"</string>
-
-    <!-- Settings strings -->
-    <string name="stopwatch_settings">秒表</string>
-    <string name="keep_display_on_stopwatch">保持屏幕开启</string>
-    <string name="keep_display_on_stopwatch_summary">秒表运行时不让屏幕自动关闭</string>
-
     <string name="clock_settings" msgid="8887845806151785393">"时钟"</string>
     <string name="clock_style" msgid="2265011060429742344">"样式"</string>
   <string-array name="clock_style_entries">

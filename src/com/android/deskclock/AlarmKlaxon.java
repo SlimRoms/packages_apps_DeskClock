@@ -72,7 +72,6 @@ public class AlarmKlaxon extends Service {
                     if (Log.LOGV) {
                         Log.v("*********** Alarm killer triggered ***********");
                     }
-
                     sendKillBroadcast((Alarm) msg.obj, false);
                     stopSelf();
                     break;

@@ -60,7 +60,7 @@
     <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> izinsuku"</string>
     <string name="hour" msgid="2546819039651509323">"1 ihora"</string>
     <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g> amahora"</string>
-    <string name="minute" msgid="2486157997434653710">"Iminithi elingu-1"</string>
+    <string name="minute" msgid="2486157997434653710">"1 iminithi"</string>
     <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g> amaminithi"</string>
     <string name="every_day" msgid="4100909974923444602">"Nsuku zonke"</string>
     <string name="never" msgid="54104287800571769">"Akusoze"</string>
@@ -191,10 +191,8 @@
     <item quantity="one" msgid="6764708652976799977">"1 iminithi"</item>
     <item quantity="other" msgid="3799129667336330616">"<xliff:g id="NUMBER">%d</xliff:g> izikhathi"</item>
   </plurals>
-    <string name="home_label" msgid="4436139365695453870">"Ekhaya"</string>
+    <string name="home_label" msgid="4436139365695453870">"Esasekhaya"</string>
     <string name="cities_activity_title" msgid="8552462751129256730">"Amadolobha"</string>
-    <string name="alarm_on" msgid="4344630320756422804">"VULIWE"</string>
-    <string name="alarm_off" msgid="6478058633710013612">"VALIWE"</string>
     <string name="clock_settings" msgid="8887845806151785393">"IWASHI"</string>
     <string name="clock_style" msgid="2265011060429742344">"Isitayela"</string>
   <string-array name="clock_style_entries">

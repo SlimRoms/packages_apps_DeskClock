@@ -192,7 +192,7 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
             notifyDataSetChanged();
         }
 
-        /*package*/ void loadCitiesDataBase(Context c) {
+        private void loadCitiesDataBase(Context c) {
             CityObj[] tempList = Utils.loadCitiesDataBase(c);
             if (tempList == null) {
                 return;

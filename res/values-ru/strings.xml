@@ -31,7 +31,6 @@
     <string name="default_label" msgid="5590025289805630372">"Будильник"</string>
     <string name="set_alarm" msgid="9148359866152726808">"Установить будильник"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Вибросигнал"</string>
-    <string name="alarm_increasing_volume">Возрастающая громкость</string>
     <string name="alarm_repeat" msgid="7242985466344233206">"Повторять"</string>
     <string name="alert" msgid="6506982899651975645">"Звонок будильника"</string>
     <string name="ringtone" msgid="9110746249688559579">"Рингтон"</string>
@@ -121,9 +120,6 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Загрузка мелодии звонка..."</string>
     <string name="timer_ring_service_desc" msgid="2620214305660322415">"Модуль воспроизведения сигналов таймера"</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Установить будильник"</string>
-    <!-- Label on the main screen control used to set alarm when there is already an existing alarm [CHAR LIMIT=30]-->
-    <string name="control_set_alarm_with_existing"><xliff:g id="time">%s</xliff:g></string>
-
     <!-- no translation found for control_set_alarm_with_existing (3359285346655630660) -->
     <skip />
     <string name="menu_timer" msgid="6459070074762877114">"Таймер"</string>
@@ -151,13 +147,6 @@
     <string name="sw_share_main" msgid="7703563468204234405">"Мое время: <xliff:g id="TIME">%s</xliff:g>"</string>
     <string name="sw_share_laps" msgid="614390674795945007">"Время круга"</string>
     <string name="sw_notification_lap_number" msgid="3535420316052647126">"Круг <xliff:g id="NUMBER">%d</xliff:g>"</string>
-  <string-array name="stopwatch_format_set">
-    <item msgid="7855304148648938406">"<xliff:g id="M">%2$d</xliff:g>м <xliff:g id="S">%3$02d</xliff:g>с.<xliff:g id="D">%4$02d</xliff:g>"</item>
-    <item msgid="3964356050933061913">"<xliff:g id="M">%2$02d</xliff:g>м <xliff:g id="S">%3$02d</xliff:g>с.<xliff:g id="D">%4$02d</xliff:g>"</item>
-    <item msgid="4906928997138522728">"<xliff:g id="H">%1$d</xliff:g>ч <xliff:g id="M">%2$02d</xliff:g>м <xliff:g id="S">%3$02d</xliff:g>с.<xliff:g id="D">%4$02d</xliff:g>"</item>
-    <item msgid="1167529664702951052">"<xliff:g id="H">%1$02d</xliff:g>ч <xliff:g id="M">%2$02d</xliff:g>м <xliff:g id="S">%3$02d</xliff:g>с.<xliff:g id="D">%4$02d</xliff:g>"</item>
-    <item msgid="4383974684898411623">"<xliff:g id="H">%1$03d</xliff:g>ч <xliff:g id="M">%2$02d</xliff:g>м <xliff:g id="S">%3$02d</xliff:g>с.<xliff:g id="D">%4$02d</xliff:g>"</item>
-  </string-array>
   <plurals name="Nhours_description">
     <item quantity="one" msgid="371227238759147245">"1 ч."</item>
     <item quantity="other" msgid="7018184076091344797">"<xliff:g id="NUMBER">%d</xliff:g> ч."</item>
@@ -195,10 +184,8 @@
     <item quantity="one" msgid="6764708652976799977">"1 мин."</item>
     <item quantity="other" msgid="3799129667336330616">"Таймеров: <xliff:g id="NUMBER">%d</xliff:g>"</item>
   </plurals>
-    <string name="home_label" msgid="4436139365695453870">"Главная страница"</string>
+    <string name="home_label" msgid="4436139365695453870">"Дома"</string>
     <string name="cities_activity_title" msgid="8552462751129256730">"Города"</string>
-    <string name="alarm_on" msgid="4344630320756422804">"ВКЛ"</string>
-    <string name="alarm_off" msgid="6478058633710013612">"ВЫКЛ"</string>
     <string name="clock_settings" msgid="8887845806151785393">"ЧАСЫ"</string>
     <string name="clock_style" msgid="2265011060429742344">"Стиль"</string>
   <string-array name="clock_style_entries">
@@ -206,7 +193,7 @@
     <item msgid="8483930821046925592">"Цифры"</item>
   </string-array>
     <string name="automatic_home_clock" msgid="6274174710735449252">"Показывать время дома"</string>
-    <string name="automatic_home_clock_summary" msgid="6020476321040807273">"Когда я в другом часовом поясе, показывать время в моем городе на отдельных часах"</string>
+    <string name="automatic_home_clock_summary" msgid="6020476321040807273">"Показывать на отдельных часах, сколько времени дома, когда я нахожусь в другом часовом поясе"</string>
     <string name="home_time_zone" msgid="9199730676287974501">"Мой часовой пояс"</string>
     <string name="home_time_zone_title" msgid="807894493443834624">"Мой часовой пояс"</string>
     <string name="time_picker_cancel" msgid="7437106489606013077">"Отмена"</string>
@@ -334,63 +321,4 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Удалить этот таймер?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Удалить этот город?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Часы"</string>
-
-    <string name="show_status_bar_icon_title">Показывать иконку</string>
-    <string name="show_status_bar_icon_summary">Отображать иконку в строке состояния при установленном будильнике</string>
-
-    <!-- Setting title for the flip action setting. -->
-    <string name="flip_action_title">Переворот</string>
-
-    <!-- Dialog title of the flip action setting. -->
-    <string name="flip_action_dialog_title">Выбор действия\u2026</string>
-
-    <!-- Setting summary for the flip action setting. -->
-    <string name="flip_action_summary">При переворачивании телефона <xliff:g id="action">%s</xliff:g></string>
-
-    <!-- Setting title for the shake action setting. -->
-    <string name="shake_action_title">Встряхивание</string>
-
-    <!-- Dialog title for the shake action setting. -->
-    <string name="shake_action_dialog_title">Выбор действия\u2026</string>
-
-    <!-- Setting summary for the shake action setting. -->
-    <string name="shake_action_summary">При встряхивании телефона <xliff:g id="action">%s</xliff:g></string>
-
-    <!-- Summary texts for shake and flip actions. Must be ordered by numerical value (do nothing = 0, snooze = 1, dismiss = 2) -->
-    <string-array name="action_summary_entries">
-      <item>ничего не делать</item>
-      <item>отложить будильник</item>
-      <item>выключить будильник</item>
-    </string-array>
-
-    <!-- Settings strings -->
-    <string name="stopwatch_settings">СЕКУНДОМЕР</string>
-    <string name="keep_display_on_stopwatch">Не выключать экран</string>
-    <string name="keep_display_on_stopwatch_summary">Держать экран включённым, пока секундомер работает</string>
-
-    <!-- Empty list message -->
-    <string name="no_alarms">Будильники не установлены</string>
-
-    <!-- User-defined cities -->
-    <string name="menu_item_add">Добавить</string>
-    <string name="cities_add_city_title">Добавить город</string>
-    <string name="cities_add_city_city">Город:</string>
-    <string name="cities_add_city_timezone">Часовой пояс:</string>
-    <string name="cities_add_city_gps_cd">Нажмите для указания своего города</string>
-    <string name="cities_add_loading">Загрузка\u2026</string>
-    <string name="cities_add_searching">Поиск\u2026</string>
-    <string name="cities_add_gps_no_results">Запрос GPS не дал данных о местоположении</string>
-    <string name="cities_add_gps_not_available">GPS недоступен</string>
-    <string name="cities_add_already_exists">Город уже есть в базе</string>
-    <string name="cities_add_city_failed">Невозможно создать город</string>
-    <string name="cities_delete_city_title">Удалить город</string>
-    <string name="cities_delete_city_msg">Вы действительно хотите удалить <xliff:g id="city">%s</xliff:g>?</string>
-    <string name="cities_delete_city_failed">Невозможно удалить город</string>
-
-    <!-- Accessibility labels for alarm buttons -->
-    <string name="profile_description">Профиль <xliff:g id="profile">%s</xliff:g></string>
-
-    <!-- No profile selected label -->
-    <string name="profile_no_selected">Профиль не выбран</string>
-
 </resources>

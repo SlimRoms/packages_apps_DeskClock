@@ -191,17 +191,15 @@
     <item quantity="one" msgid="6764708652976799977">"Ett minutt"</item>
     <item quantity="other" msgid="3799129667336330616">"<xliff:g id="NUMBER">%d</xliff:g> tidstakere"</item>
   </plurals>
-    <string name="home_label" msgid="4436139365695453870">"Startside"</string>
+    <string name="home_label" msgid="4436139365695453870">"Hjemme"</string>
     <string name="cities_activity_title" msgid="8552462751129256730">"Byer"</string>
-    <string name="alarm_on" msgid="4344630320756422804">"PÅ"</string>
-    <string name="alarm_off" msgid="6478058633710013612">"AV"</string>
     <string name="clock_settings" msgid="8887845806151785393">"KLOKKEN"</string>
     <string name="clock_style" msgid="2265011060429742344">"Stil"</string>
   <string-array name="clock_style_entries">
     <item msgid="917900462224167608">"Analog"</item>
     <item msgid="8483930821046925592">"Digitalt"</item>
   </string-array>
-    <string name="automatic_home_clock" msgid="6274174710735449252">"Still klokken automatisk etter hjemmetidssonen"</string>
+    <string name="automatic_home_clock" msgid="6274174710735449252">"Klokkeslett hjemme"</string>
     <string name="automatic_home_clock_summary" msgid="6020476321040807273">"Når du reiser utenfor den vanlige tidssonen din, kan du legge til en klokke for hjemmetidssonen"</string>
     <string name="home_time_zone" msgid="9199730676287974501">"Hjemmetidssone"</string>
     <string name="home_time_zone_title" msgid="807894493443834624">"Hjemmetidssone"</string>
