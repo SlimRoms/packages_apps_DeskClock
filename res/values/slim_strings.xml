@@ -35,4 +35,10 @@
     <string name="cities_delete_city_msg">Do you want to delete <xliff:g id="city">%s</xliff:g>?</string>
     <string name="cities_delete_city_failed">Can\'t delete the city</string>
 
+    <!-- Setting title for showing/hiding the alarm status bar icon -->
+    <string name="show_status_bar_icon_title">Show icon</string>
+
+    <!-- Setting summary for showing/hiding the alarm statusbar icon -->
+    <string name="show_status_bar_icon_summary">Show an icon in the status bar when an alarm is set</string>
+
 </resources>
