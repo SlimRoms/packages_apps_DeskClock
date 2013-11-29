@@ -854,5 +854,8 @@
 
     <!-- String for no enabled alarms in timeline view [CHAR LIMIT=30] -->
     <string name="no_upcoming_alarms">NO UPCOMING ALARMS</string>
+
+    <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
+    <string name="alarm_increasing_volume">Increasing volume</string>
 </resources>
 
