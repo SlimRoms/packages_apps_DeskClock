@@ -24,6 +24,8 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnErrorListener;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Handler;
+import android.os.Message;
 import android.os.Vibrator;
 
 import com.android.deskclock.LogUtils;
@@ -46,14 +48,48 @@ public class AlarmKlaxon {
             .setUsage(AudioAttributes.USAGE_ALARM)
             .build();
 
+    private static final long INCREASING_VOLUME_DELAY = 5000; // 5sec * 7 volume levels = 30sec till max volume
+    private static final int INCREASING_VOLUME_START = 1;
+    private static final int INCREASING_VOLUME_DELTA = 1;
+
     private static boolean sStarted = false;
+    private static AudioManager sAudioManager = null;
     private static MediaPlayer sMediaPlayer = null;
+
+    private static int sCurrentVolume = INCREASING_VOLUME_START;
+    private static int sAlarmVolumeSetting;
+
+    // Internal messages
+    private static final int INCREASING_VOLUME = 1001;
+
+    private static Handler sHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case INCREASING_VOLUME:
+                    if (sStarted && sMediaPlayer != null && sMediaPlayer.isPlaying()) {
+                        sCurrentVolume += INCREASING_VOLUME_DELTA;
+                        LogUtils.v("Increasing alarm volume to " + sCurrentVolume);
+                        sAudioManager.setStreamVolume(AudioManager.STREAM_ALARM, sCurrentVolume, 0);
+                        if (sCurrentVolume < sAlarmVolumeSetting) {
+                            sHandler.sendEmptyMessageDelayed(INCREASING_VOLUME,
+                                    INCREASING_VOLUME_DELAY);
+                        }
+                    }
+                    break;
+            }
+        }
+    };
+
 
     public static void stop(Context context) {
         LogUtils.v("AlarmKlaxon.stop()");
 
         if (sStarted) {
             sStarted = false;
+
+            sHandler.removeMessages(INCREASING_VOLUME);
+
             // Stop audio playing
             if (sMediaPlayer != null) {
                 sMediaPlayer.stop();
@@ -62,6 +98,9 @@ public class AlarmKlaxon {
                 audioManager.abandonAudioFocus(null);
                 sMediaPlayer.release();
                 sMediaPlayer = null;
+
+                // reset to default from before
+                sAudioManager.setStreamVolume(AudioManager.STREAM_ALARM, sAlarmVolumeSetting, 0);
             }
 
             ((Vibrator)context.getSystemService(Context.VIBRATOR_SERVICE)).cancel();
@@ -81,6 +120,15 @@ public class AlarmKlaxon {
             if (alarmNoise == null) {
                 alarmNoise = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
                 LogUtils.v("Using default alarm: " + alarmNoise.toString());
+            }
+
+            sAudioManager = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
+            // save current value
+            sAlarmVolumeSetting = sAudioManager.getStreamVolume(AudioManager.STREAM_ALARM);
+
+            if (instance.mIncreasingVolume) {
+                sCurrentVolume = INCREASING_VOLUME_START;
+                sAudioManager.setStreamVolume(AudioManager.STREAM_ALARM, sCurrentVolume, 0);
             }
 
             // TODO: Reuse mMediaPlayer instead of creating a new one and/or use RingtoneManager.
@@ -104,7 +152,7 @@ public class AlarmKlaxon {
                 } else {
                     sMediaPlayer.setDataSource(context, alarmNoise);
                 }
-                startAlarm(context, sMediaPlayer);
+                startAlarm(context, sMediaPlayer, instance);
             } catch (Exception ex) {
                 LogUtils.v("Using the fallback ringtone");
                 // The alarmNoise may be on the sd card which could be busy right
@@ -113,7 +161,7 @@ public class AlarmKlaxon {
                     // Must reset the media player to clear the error state.
                     sMediaPlayer.reset();
                     setDataSourceFromResource(context, sMediaPlayer, R.raw.fallbackring);
-                    startAlarm(context, sMediaPlayer);
+                    startAlarm(context, sMediaPlayer, instance);
                 } catch (Exception ex2) {
                     // At this point we just don't play anything.
                     LogUtils.e("Failed to play fallback ringtone", ex2);
@@ -130,7 +178,8 @@ public class AlarmKlaxon {
     }
 
     // Do the common stuff when starting the alarm.
-    private static void startAlarm(Context context, MediaPlayer player) throws IOException {
+    private static void startAlarm(Context context, MediaPlayer player,
+            AlarmInstance instance) throws IOException {
         AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
         // do not play alarms if stream volume is 0 (typically because ringer mode is silent).
         if (audioManager.getStreamVolume(AudioManager.STREAM_ALARM) != 0) {
@@ -140,6 +189,10 @@ public class AlarmKlaxon {
             audioManager.requestAudioFocus(null,
                     AudioManager.STREAM_ALARM, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
             player.start();
+
+            if (instance.mIncreasingVolume && sCurrentVolume < sAlarmVolumeSetting) {
+                sHandler.sendEmptyMessageDelayed(INCREASING_VOLUME, INCREASING_VOLUME_DELAY);
+            }
         }
     }
 
