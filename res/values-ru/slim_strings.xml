@@ -34,4 +34,31 @@
     <string name="cities_delete_city_msg">Вы действительно хотите удалить <xliff:g id="city">%s</xliff:g>?</string>
     <string name="cities_delete_city_failed">Невозможно удалить город</string>
 
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Переворот</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title" product="tablet">Повернуть планшет на\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Повернуть телефон на\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary" product="tablet">При переворачивании планшета <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">При переворачивании телефона <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Setting title for the shake action setting. -->
+    <string name="shake_action_title">Встряхивание</string>
+
+    <!-- Dialog title for the shake action setting. -->
+    <string name="shake_action_dialog_title" product="tablet">Встряхните планшет для\u2026</string>
+    <string name="shake_action_dialog_title" product="default">Встряхните телефон для\u2026</string>
+
+    <!-- Setting summary for the shake action setting. -->
+    <string name="shake_action_summary" product="tablet">При встряхивании планшета <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">При встряхивании телефона <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Summary texts for shake and flip actions -->
+    <string name="action_summary_do_nothing">ничего не делать</string>
+    <string name="action_summary_snooze">отложить будильник</string>
+    <string name="action_summary_dismiss">выключить будильник</string>
+
 </resources>
