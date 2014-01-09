@@ -41,4 +41,31 @@
     <!-- Setting summary for showing/hiding the alarm statusbar icon -->
     <string name="show_status_bar_icon_summary">Mutassa az állapot sávon az értesítési ikon, ha be van állítva ébresztés</string>
 
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Fordítási művelet</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title" product="tablet">Fordítsd a tabletet\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Fordítsd a telefont\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary" product="tablet">Felfordítva a tabletet <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Felfordítva a telefont <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Setting title for the shake action setting. -->
+    <string name="shake_action_title">Rázási művelet</string>
+
+    <!-- Dialog title for the shake action setting. -->
+    <string name="shake_action_dialog_title" product="tablet">Rázva a tabletet\u2026</string>
+    <string name="shake_action_dialog_title" product="default">Rázva a telefont\u2026</string>
+
+    <!-- Setting summary for the shake action setting. -->
+    <string name="shake_action_summary" product="tablet">Rázva a tabletet <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Rázva a telefont <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Summary texts for shake and flip actions -->
+    <string name="action_summary_do_nothing">nem csinál semmit</string>
+    <string name="action_summary_snooze">szundi</string>
+    <string name="action_summary_dismiss">elutasítja</string>
+
 </resources>
