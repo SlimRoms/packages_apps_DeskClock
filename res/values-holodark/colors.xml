@@ -29,7 +29,7 @@
     <color name="blackish">#000000</color>
     <color name="blackish_selected">#0cffffff</color>
     <!-- Transparent background for use in the footer. 80% opacity. The color must remain the same as "blackish" above. -->
-    <color name="blackish_trans">#cc1c1e20</color>
+    <color name="blackish_trans">#cc000000</color>
     <color name="white">#ffffffff</color>
     <color name="red">#ffee0000</color>
     <color name="grey">#ffaaaaaa</color>
