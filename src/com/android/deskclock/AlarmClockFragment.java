@@ -76,6 +76,7 @@ import com.android.deskclock.widget.TextTime;
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -694,15 +695,8 @@ public class AlarmClockFragment extends DeskClockFragment implements
         private final int mCollapseExpandHeight;
 
         // This determines the order in which it is shown and processed in the UI.
-        private final int[] DAY_ORDER = new int[] {
-                Calendar.SUNDAY,
-                Calendar.MONDAY,
-                Calendar.TUESDAY,
-                Calendar.WEDNESDAY,
-                Calendar.THURSDAY,
-                Calendar.FRIDAY,
-                Calendar.SATURDAY,
-        };
+        // The array is filled when the adapter is created
+        private final int[] DAY_ORDER = new int[7];
 
         public class ItemHolder {
 
@@ -758,6 +752,14 @@ public class AlarmClockFragment extends DeskClockFragment implements
             DateFormatSymbols dfs = new DateFormatSymbols();
             mShortWeekDayStrings = dfs.getShortWeekdays();
             mLongWeekDayStrings = dfs.getWeekdays();
+            int firstDayOfWeek = Calendar.getInstance(Locale.getDefault()).getFirstDayOfWeek();
+            int j = 0;
+            for (int i = firstDayOfWeek; i <= DAY_ORDER.length; i++, j++) {
+                DAY_ORDER[j] = i;
+            }
+            for (int i = Calendar.SUNDAY; i < firstDayOfWeek; i++, j++) {
+                DAY_ORDER[j] = i;
+            }
 
             Resources res = mContext.getResources();
             mColorLit = res.getColor(R.color.clock_white);
