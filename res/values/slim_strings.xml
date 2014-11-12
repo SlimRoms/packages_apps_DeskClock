@@ -43,4 +43,9 @@
     <string name="action_summary_snooze">snooze alarm</string>
     <string name="action_summary_dismiss">dismiss alarm</string>
 
+    <!-- Setting title for showing/hiding the alarm status bar icon -->
+    <string name="show_status_bar_icon_title">Show icon</string>
+    <!-- Setting summary for showing/hiding the alarm statusbar icon -->
+    <string name="show_status_bar_icon_summary">Show an icon in the status bar when an alarm is set</string>
+
 </resources>
