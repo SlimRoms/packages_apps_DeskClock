@@ -34,8 +34,16 @@
   <string name="show_status_bar_icon_title">Εμφάνιση εικονιδίου</string>
   <string name="show_status_bar_icon_summary">Εμφάνιση εικονιδίου στη μπάρα κατάστασης όταν έχει οριστεί ώρα αφύπνισης</string>
   <string name="flip_action_title">Ενέργεια αναποδογυρίσματος</string>
+  <string name="flip_action_dialog_title" product="tablet">Αναποδογύρισμα tablet σε\u2026</string>
+  <string name="flip_action_dialog_title" product="default">Αναποδογύρισμα τηλεφώνου σε\u2026</string>
   <string name="flip_action_summary" product="tablet">Το αναποδογύρισμα του tablet <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Το αναποδογύρισμα του τηλεφώνου θα <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">Ενέργεια κουνήματος</string>
+  <string name="shake_action_dialog_title" product="tablet">Ενέργεια κουνήματος tablet σε\u2026</string>
+  <string name="shake_action_dialog_title" product="default">Ενέργεια κουνήματος τηλεφώνου σε\u2026</string>
+  <string name="shake_action_summary" product="tablet">Κουνώντας το tablet θα <xliff:g id="action"> %s </xliff:g></string>
+  <string name="shake_action_summary" product="default">Κουνώντας το τηλέφωνο θα <xliff:g id="action"> %s </xliff:g></string>
   <string name="action_summary_do_nothing">Να μη γίνει καμία ενέργεια</string>
+  <string name="action_summary_snooze">Επανάληψη αφύπνισης</string>
+  <string name="action_summary_dismiss">Απόρριψη αφύπνισης</string>
 </resources>
