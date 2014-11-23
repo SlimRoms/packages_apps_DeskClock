@@ -29,7 +29,7 @@
   <string name="cities_add_already_exists">Die Stadt existiert bereits in der Datenbank</string>
   <string name="cities_add_city_failed">Stadt kann nicht erstellt werden</string>
   <string name="cities_delete_city_title">Stadt löschen</string>
-  <string name="cities_delete_city_msg">Soll die Stadt <xliff:g id="city">%s</xliff:g> wirklich gelöscht werden?</string>
+  <string name="cities_delete_city_msg">Soll <xliff:g id="city">%s</xliff:g> wirklich gelöscht werden?</string>
   <string name="cities_delete_city_failed">Stadt kann nicht gelöscht werden</string>
   <string name="show_status_bar_icon_title">Zeige Symbol</string>
   <string name="show_status_bar_icon_summary">Zeige ein Symbol in der Statusleiste, wenn ein Alarm aktiviert ist</string>
