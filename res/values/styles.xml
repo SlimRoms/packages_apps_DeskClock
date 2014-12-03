@@ -23,7 +23,7 @@
 
     <style name="DeskClockParentTheme" parent="@android:style/Theme.Material">
         <item name="android:statusBarColor">@color/status_bar</item>
-        <item name="android:colorControlActivated">@color/white</item>
+        <item name="android:colorControlActivated">@color/hot_pink</item>
         <item name="android:colorControlNormal">@color/white</item>
         <item name="android:popupMenuStyle">?android:attr/actionOverflowMenuStyle</item>
         <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
