@@ -17,7 +17,6 @@
 package com.android.deskclock;
 
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
@@ -51,8 +50,6 @@ public class ScreensaverSettingsActivity extends PreferenceActivity
             final ListPreference listPref = (ListPreference) pref;
             final int idx = listPref.findIndexOfValue((String) newValue);
             listPref.setSummary(listPref.getEntries()[idx]);
-        } else if (KEY_NIGHT_MODE.equals(pref.getKey())) {
-            boolean state = ((CheckBoxPreference) pref).isChecked();
         }
         return true;
     }
@@ -61,10 +58,6 @@ public class ScreensaverSettingsActivity extends PreferenceActivity
         ListPreference listPref = (ListPreference) findPreference(KEY_CLOCK_STYLE);
         listPref.setSummary(listPref.getEntry());
         listPref.setOnPreferenceChangeListener(this);
-
-        Preference pref = findPreference(KEY_NIGHT_MODE);
-        boolean state = ((CheckBoxPreference) pref).isChecked();
-        pref.setOnPreferenceChangeListener(this);
     }
 
     @Override
