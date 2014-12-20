@@ -34,16 +34,16 @@
   <string name="show_status_bar_icon_title">Visualizza icona</string>
   <string name="show_status_bar_icon_summary">Mostra un\'icona nella barra di stato quando è impostata una sveglia</string>
   <string name="flip_action_title">Azioni capovolgimento</string>
-  <string name="flip_action_dialog_title" product="tablet">Capovolgi il tablet per\u2026</string>
-  <string name="flip_action_dialog_title" product="default">Capovolgi il telefono per\u2026</string>
-  <string name="flip_action_summary" product="tablet">Il capovolgimento del tablet causerà <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">Il capovolgimento del telefono causerà <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_dialog_title" product="tablet">Capovolgi il tablet a\u2026</string>
+  <string name="flip_action_dialog_title" product="default">Capovolgi il telefono a\u2026</string>
+  <string name="flip_action_summary" product="tablet">Il capovolgimento del tablet provocherà <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Il capovolgimento del telefono provocherà <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">Azioni Shake</string>
-  <string name="shake_action_dialog_title" product="tablet">Scuoti il tablet per\u2026</string>
-  <string name="shake_action_dialog_title" product="default">Scuoti il telefono per\u2026</string>
-  <string name="shake_action_summary" product="tablet">Lo scuotimento del tablet causerà <xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_summary" product="default">Lo scuotimento del telefono causerà <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_dialog_title" product="tablet">Scuoti il tablet a\u2026</string>
+  <string name="shake_action_dialog_title" product="default">Scuoti il telefono a\u2026</string>
+  <string name="shake_action_summary" product="tablet">Lo scuotimento del tablet provocherà <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Lo scuotimento del telefono provocherà <xliff:g id="action">%s</xliff:g></string>
   <string name="action_summary_do_nothing">niente</string>
-  <string name="action_summary_snooze">silenziamento sveglia</string>
-  <string name="action_summary_dismiss">disattivazione sveglia</string>
+  <string name="action_summary_snooze">il silenziamento della sveglia</string>
+  <string name="action_summary_dismiss">la disattivazione della sveglia</string>
 </resources>
