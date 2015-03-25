@@ -17,14 +17,21 @@
 package com.android.deskclock;
 
 import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceCategory;
+import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
+import android.provider.Settings;
 import android.text.format.DateUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -60,6 +67,7 @@ public class SettingsActivity extends PreferenceActivity
             "automatic_home_clock";
     public static final String KEY_VOLUME_BUTTONS =
             "volume_button_setting";
+    public static final String KEY_ALARM_SETTINGS = "key_alarm_settings";
 
     public static final String DEFAULT_VOLUME_BEHAVIOR = "0";
     public static final String VOLUME_BEHAVIOR_SNOOZE = "1";
@@ -203,13 +211,39 @@ public class SettingsActivity extends PreferenceActivity
         listPref.setSummary(listPref.getEntry());
         listPref.setOnPreferenceChangeListener(this);
 
+        SensorManager sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+
         listPref = (ListPreference) findPreference(KEY_FLIP_ACTION);
-        updateActionSummary(listPref, listPref.getValue(), R.string.flip_action_summary);
-        listPref.setOnPreferenceChangeListener(this);
+        if (listPref != null) {
+            List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ORIENTATION);
+            if (sensorList.size() < 1) { // This will be true if no orientation sensor
+                listPref.setValue("0"); // Turn it off
+                PreferenceCategory category = (PreferenceCategory) findPreference(
+                        KEY_ALARM_SETTINGS);
+                if (category != null) {
+                    category.removePreference(listPref);
+                }
+            } else {
+                updateActionSummary(listPref, listPref.getValue(), R.string.flip_action_summary);
+                listPref.setOnPreferenceChangeListener(this);
+            }
+        }
 
         listPref = (ListPreference) findPreference(KEY_SHAKE_ACTION);
-        updateActionSummary(listPref, listPref.getValue(), R.string.shake_action_summary);
-        listPref.setOnPreferenceChangeListener(this);
+        if (listPref != null) {
+            List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
+            if (sensorList.size() < 1) { // This will be true if no accelerometer sensor
+                listPref.setValue("0"); // Turn it off
+                PreferenceCategory category = (PreferenceCategory) findPreference(
+                        KEY_ALARM_SETTINGS);
+                if (category != null) {
+                    category.removePreference(listPref);
+                }
+            } else {
+                updateActionSummary(listPref, listPref.getValue(), R.string.shake_action_summary);
+                listPref.setOnPreferenceChangeListener(this);
+            }
+        }
 
         SnoozeLengthDialog snoozePref = (SnoozeLengthDialog) findPreference(KEY_ALARM_SNOOZE);
         snoozePref.setSummary();
