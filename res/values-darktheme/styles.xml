@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FastScrollStyle" parent="@android:style/Widget.Material.FastScroll">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:padding">24.0dip</item>
+    </style>
+    <style name="TextAppearance">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="TextAppearance.StatusBar" parent="@style/TextAppearance">
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+    </style>
+    <style name="TextAppearance.StatusBar.EventContent" parent="@style/TextAppearance.StatusBar">
+        <item name="android:textColor">#b1ffffff</item>
+    </style>
+    <style name="TextAppearance.StatusBar.EventContent.Title" parent="@style/TextAppearance.StatusBar.EventContent">
+        <item name="android:textColor">#b1ffffff</item>
+    </style>
+    <style name="SettingsTheme" parent="@style/DeskClockParentTheme" />
+    <style name="CitiesTheme" parent="@style/DeskClockParentTheme" />
+    <style name="CitiesListViewTheme" parent="@style/CitiesTheme" />
+    <style name="DeskClockParentTheme" parent="@android:style/Theme.Material" />
+    <style name="DeskClock" parent="@style/DeskClockParentTheme" />
+</resources>
