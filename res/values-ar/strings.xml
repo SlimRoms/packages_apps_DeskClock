@@ -95,11 +95,11 @@
     <string name="settings" msgid="5849739030579520686">"الإعدادات"</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"طول مدة الغفوة"</string>
     <plurals name="snooze_duration" formatted="false" msgid="3112918131095248271">
-      <item quantity="zero"><xliff:g id="NUMBER">%d</xliff:g> minutes</item>
-      <item quantity="two">دقيقتان (<xliff:g id="NUMBER">%d</xliff:g>)</item>
-      <item quantity="few"><xliff:g id="NUMBER">%d</xliff:g> دقائق</item>
-      <item quantity="many"><xliff:g id="NUMBER">%d</xliff:g> دقيقة</item>
-      <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> من الدقائق</item>
+      <item quantity="zero"><xliff:g id="NUMBER">%s</xliff:g> minutes</item>
+      <item quantity="two">دقيقتان (<xliff:g id="NUMBER">%s</xliff:g>)</item>
+      <item quantity="few"><xliff:g id="NUMBER">%s</xliff:g> دقائق</item>
+      <item quantity="many"><xliff:g id="NUMBER">%s</xliff:g> دقيقة</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> من الدقائق</item>
       <item quantity="one">دقيقة واحدة</item>
     </plurals>
     <plurals name="snooze_picker_label" formatted="false" msgid="322739253661747732">
@@ -111,7 +111,7 @@
       <item quantity="one">دقيقة واحدة</item>
     </plurals>
     <string name="auto_silence_title" msgid="2012754009554434544">"صامت بعد"</string>
-    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> دقيقة"</string>
+    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%s</xliff:g> دقيقة"</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"أبدًا"</string>
   <string-array name="auto_silence_entries">
     <item msgid="3024545954917711306">"دقيقة واحدة"</item>

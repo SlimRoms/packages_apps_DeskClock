@@ -87,15 +87,15 @@
     <string name="settings" msgid="5849739030579520686">"સેટિંગ્સ"</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"સ્નૂઝ લંબાઈ"</string>
     <plurals name="snooze_duration" formatted="false" msgid="3112918131095248271">
-      <item quantity="one"><xliff:g id="NUMBER">%d</xliff:g> મિનિટ</item>
-      <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> મિનિટ</item>
+      <item quantity="one"><xliff:g id="NUMBER">%s</xliff:g> મિનિટ</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> મિનિટ</item>
     </plurals>
     <plurals name="snooze_picker_label" formatted="false" msgid="322739253661747732">
       <item quantity="one">મિનિટ</item>
       <item quantity="other">મિનિટ</item>
     </plurals>
     <string name="auto_silence_title" msgid="2012754009554434544">"આના પછી શાંતિ"</string>
-    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> મિનિટ"</string>
+    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%s</xliff:g> મિનિટ"</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"ક્યારેય નહીં"</string>
   <string-array name="auto_silence_entries">
     <item msgid="3024545954917711306">"1 મિનિટ"</item>

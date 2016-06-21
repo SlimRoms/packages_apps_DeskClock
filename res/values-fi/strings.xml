@@ -87,7 +87,7 @@
     <string name="settings" msgid="5849739030579520686">"Asetukset"</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"Torkkuajan pituus"</string>
     <plurals name="snooze_duration" formatted="false" msgid="3112918131095248271">
-      <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> minuuttia</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> minuuttia</item>
       <item quantity="one">1 minuutti</item>
     </plurals>
     <plurals name="snooze_picker_label" formatted="false" msgid="322739253661747732">
@@ -95,7 +95,7 @@
       <item quantity="one">minuutti</item>
     </plurals>
     <string name="auto_silence_title" msgid="2012754009554434544">"Hiljennä tämän ajan jälkeen:"</string>
-    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> minuuttia"</string>
+    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%s</xliff:g> minuuttia"</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"Ei koskaan"</string>
   <string-array name="auto_silence_entries">
     <item msgid="3024545954917711306">"1 minuutti"</item>

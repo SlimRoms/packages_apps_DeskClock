@@ -87,7 +87,7 @@
     <string name="settings" msgid="5849739030579520686">"Ezarpenak"</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"Atzerapenaren luzera"</string>
     <plurals name="snooze_duration" formatted="false" msgid="3112918131095248271">
-      <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> minutu</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> minutu</item>
       <item quantity="one">1 minutu</item>
     </plurals>
     <plurals name="snooze_picker_label" formatted="false" msgid="322739253661747732">
@@ -95,7 +95,7 @@
       <item quantity="one">minutu</item>
     </plurals>
     <string name="auto_silence_title" msgid="2012754009554434544">"Gelditu tarte hau igaro ondoren"</string>
-    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> minutu"</string>
+    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%s</xliff:g> minutu"</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"Inoiz ez"</string>
   <string-array name="auto_silence_entries">
     <item msgid="3024545954917711306">"1 minutu"</item>

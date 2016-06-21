@@ -87,7 +87,7 @@
     <string name="settings" msgid="5849739030579520686">"సెట్టింగ్‌లు"</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"తాత్కాలిక ఆపివేత నిడివి"</string>
     <plurals name="snooze_duration" formatted="false" msgid="3112918131095248271">
-      <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> నిమిషాలు</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> నిమిషాలు</item>
       <item quantity="one">1 నిమిషం</item>
     </plurals>
     <plurals name="snooze_picker_label" formatted="false" msgid="322739253661747732">
@@ -95,7 +95,7 @@
       <item quantity="one">నిమిషం</item>
     </plurals>
     <string name="auto_silence_title" msgid="2012754009554434544">"ఇంత సమయం తర్వాత నిశ్శబ్దంగా ఉండాలి"</string>
-    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> నిమిషాలు"</string>
+    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%s</xliff:g> నిమిషాలు"</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"ఎప్పటికీ వద్దు"</string>
   <string-array name="auto_silence_entries">
     <item msgid="3024545954917711306">"1 నిమిషం"</item>
